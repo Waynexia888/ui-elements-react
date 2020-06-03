@@ -1,46 +1,25 @@
-import React from 'react';
-import Button, { ButtonType, ButtonSize } from './components/Button/button'
+import React from "react";
 import Menu from "./components/Menu/menu";
-import MenuItem from "./components/Menu/menuItem";  
-
-function App() {
+import MenuItem from "./components/Menu/menuItem";
+import SubMenu from "./components/Menu/subMenu";
+const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Menu defaultIndex={0} onSelect={(index) => {alert(index)}} mode="vertical">
-          <MenuItem index={0}>
-            cool link
-          </MenuItem>
-          <MenuItem index={1} disabled>
-            cool link 2
-          </MenuItem>        
-          <MenuItem index={2}>
-            cool link 3
-          </MenuItem>
-        </Menu>
-        <Button className="custom"> Hello </Button>
-        <Button disabled> Disabled Button </Button>
-        <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
-          {" "}
-          Large Primary{" "}
-        </Button>
-        <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
-          {" "}
-          Small Danger{" "}
-        </Button>
-        <Button
-          btnType={ButtonType.Link}
-          href="http://www.google.com"
-          target="_blank"
+        <Menu
+          defaultIndex={0}
+          onSelect={(index) => {
+            alert(index);
+          }}
         >
-          {" "}
-          Google Link{" "}
-        </Button>
-        <Button btnType={ButtonType.Link} href="http://www.google.com" disabled>
-          {" "}
-          Disabled Link{" "}
-        </Button>
-
+          <MenuItem>cool link</MenuItem>
+          <MenuItem disabled>cool link 2</MenuItem>
+          <SubMenu title="dropdown">
+            <MenuItem>dropdown 1</MenuItem>
+            <MenuItem>dropdown 2</MenuItem>
+          </SubMenu>
+          <MenuItem>cool link 3</MenuItem>
+        </Menu>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -55,6 +34,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;

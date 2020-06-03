@@ -4,12 +4,11 @@ import { Button } from '@storybook/react/demo';
 
 export default {
   title: 'Button',
-  component: Button,
 };
 
-export const Text = () => <Button onClick={action('clicked')}>Hello Button</Button>;
+export const text = () => <Button onClick={action('clicked')}>Hello Button</Button>;
 
-export const Emoji = () => (
+export const emoji = () => (
   <Button onClick={action('clicked')}>
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
@@ -18,5 +17,6 @@ export const Emoji = () => (
 );
 
 export const myButton = () => (
-  <Button onClick={action('log myButton')}>this is my Button !</Button>
+  <Button onClick={action('log myButton')}> this is my Button ! </Button>
 )
+

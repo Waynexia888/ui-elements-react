@@ -10,7 +10,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Icon icon="arrow-down" theme="danger" size="10x" />
+        <Icon icon="arrow-down" theme="primary" size="10x" />
         <Menu
           defaultIndex="0"
           onSelect={(index) => {
@@ -44,4 +44,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-

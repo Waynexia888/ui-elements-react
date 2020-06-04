@@ -6,6 +6,11 @@ interface LakerPlayerProps {
   value: string;
   number: number;
 }
+interface GithubUserProps {
+  login: string;
+  url: string;
+  avatar_url: string;
+}
 const SimpleComplete = () => {
   const lakers = [
     "bradley",
@@ -36,14 +41,26 @@ const SimpleComplete = () => {
   // const handleFetch = (query: string) => {
   //   return lakers.filter(name => name.includes(query)).map(name => ({value: name}))
   // }
+  // const handleFetch = (query: string) => {
+  //   return lakersWithNumber.filter(player => player.value.includes(query))
+  // }
   const handleFetch = (query: string) => {
-    return lakersWithNumber.filter((player) => player.value.includes(query));
+    return fetch(`https://api.github.com/search/users?q=${query}`)
+      .then((res) => res.json())
+      .then(({ items }) => {
+        console.log(items);
+        return items
+          .slice(0, 10)
+          .map((item: any) => ({ value: item.login, ...item }));
+      });
   };
-  const renderOption = (item: DataSourceType<LakerPlayerProps>) => {
+
+  const renderOption = (item: DataSourceType) => {
+    const itemWithGithub = item as DataSourceType<GithubUserProps>;
     return (
       <>
-        <h2>Name: {item.value}</h2>
-        <p>Number: {item.number}</p>
+        <h2>Name: {itemWithGithub.value}</h2>
+        <p>url: {itemWithGithub.url}</p>
       </>
     );
   };

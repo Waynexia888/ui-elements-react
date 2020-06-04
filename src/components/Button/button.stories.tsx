@@ -24,7 +24,7 @@ const buttonWithType = () => (
     </Button>
   </>
 );
-storiesOf("Button Component", module)
+storiesOf("Button", module)
   .add("Button", defaultButton)
   .add("Size of Button", buttonWithSize)
   .add("Type of Button", buttonWithType)

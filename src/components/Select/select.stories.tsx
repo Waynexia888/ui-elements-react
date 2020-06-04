@@ -41,7 +41,7 @@ const disabledSelect = () => (
   </Select>
 );
 
-storiesOf("Select Component", module)
+storiesOf("Select", module)
   .add("Select", defaultSelect)
   .add("Multiple selection", multipleSelect)
   .add("Disabled Select", disabledSelect);

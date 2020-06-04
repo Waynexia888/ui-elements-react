@@ -42,7 +42,7 @@ export const openedMenu = () => (
          </Menu>
        );
 
-storiesOf("Menu Component", module)
+storiesOf("Menu", module)
   .add("Menu", defaultMenu)
   .add("Vertical menu with inline submenus.", clickMenu)
   .add("Collapsed inline menu", openedMenu);

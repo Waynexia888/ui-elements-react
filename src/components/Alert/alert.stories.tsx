@@ -26,7 +26,7 @@ const descAlert = () => {
     ></Alert>
   );
 };
-storiesOf("Alert Component", module)
+storiesOf("Alert", module)
   .add("Alert", defaultAlert)
   .add("Types of Alert", stylesAlert)
   .add("Additional description for alert message", descAlert);

@@ -73,4 +73,4 @@ const SimpleComplete = () => {
   );
 };
 
-storiesOf("AutoComplete Component", module).add("AutoComplete", SimpleComplete);
+storiesOf("AutoComplete", module).add("AutoComplete", SimpleComplete);

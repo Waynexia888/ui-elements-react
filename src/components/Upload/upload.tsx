@@ -14,20 +14,35 @@ export interface UploadFile {
   error?: any;
 }
 export interface UploadProps {
+  /**Uploading URL */
   action: string;
+  /**Uploading URL Lists,*/
   defaultFileList?: UploadFile[];
+  /**Hook function which will be executed before uploading. Uploading will be stopped with false or a rejected Promise returned. */
   beforeUpload?: (file: File) => boolean | Promise<File>;
-  onProgress?: (percentage: number, file: File) => void;
-  onSuccess?: (data: any, file: File) => void;
-  onError?: (err: any, file: File) => void;
-  onChange?: (file: File) => void;
+  /**A callback function, while uploading */
+  onProgress?: (percentage: number, file: UploadFile) => void;
+  /**A callback function, when upload success */
+  onSuccess?: (data: any, file: UploadFile) => void;
+  /**A callback function, when upload failed */
+  onError?: (err: any, file: UploadFile) => void;
+  /**A callback function, can be executed when uploading state is changing	 */
+  onChange?: (file: UploadFile) => void;
+  /**A callback function, will be executed when removing file button is clicked, remove event will be prevented when return value is false or a Promise which resolve(false) or reject */
   onRemove?: (file: UploadFile) => void;
+  /**Set request headers */
   headers?: { [key: string]: any };
+  /**The name of uploading file */
   name?: string;
+  /**Uploading extra params or function which can return uploading extra params. */
   data?: { [key: string]: any };
+  /**Send cookie Information */
   withCredentials?: boolean;
+  /**File types that can be accepted. */
   accept?: string;
+  /**Whether to support selected multiple file. */
   multiple?: boolean;
+  /**Whether to drag or not */
   drag?: boolean;
 }
 

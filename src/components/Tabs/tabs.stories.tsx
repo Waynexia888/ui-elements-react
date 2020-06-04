@@ -37,7 +37,7 @@ const customTabs = () => (
     <TabItem label="tab2">this is content two</TabItem>
   </Tabs>
 );
-storiesOf("Tabs Component", module)
+storiesOf("Tabs", module)
   .add("Tabs", defaultTabs)
   .add("Basic style of tabs", cardTabs)
   .add("Customize style of tabs", customTabs);

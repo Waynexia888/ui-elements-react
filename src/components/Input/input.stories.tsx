@@ -55,7 +55,7 @@ const pandInput = () => (
   </>
 );
 
-storiesOf("Input component", module)
+storiesOf("Input", module)
   .add("Input", defaultInput)
   .add("Disabled Input", disabledInput)
   .add("Input with icon", iconInput)

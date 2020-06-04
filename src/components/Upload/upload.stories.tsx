@@ -100,7 +100,7 @@ const dragUpload = () => {
   );
 };
 
-storiesOf("Upload component", module)
+storiesOf("Upload", module)
 .add("Upload", simpleUpload)
 .add('Check upload size', checkUpload, {info: {source: false, text: textCheck}})
   .add('Drag to upload', dragUpload)

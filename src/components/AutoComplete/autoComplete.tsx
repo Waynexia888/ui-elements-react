@@ -5,11 +5,13 @@ import React, {
   KeyboardEvent,
   ReactElement,
   useEffect,
+  useRef,
 } from "react";
 import classNames from "classnames";
 import Input, { InputProps } from "../Input/input";
 import Icon from "../Icon/icon";
 import useDebounce from "../../hooks/useDebounce";
+import useClickOutside from "../../hooks/useClickOutside";
 interface DataSourceObject {
   value: string;
 }
@@ -35,9 +37,14 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
   const [suggestions, setSugestions] = useState<DataSourceType[]>([]);
   const [loading, setLoading] = useState(false);
   const [highlightIndex, setHighlightIndex] = useState(-1);
+  const triggerSearch = useRef(false);
+  const componentRef = useRef<HTMLDivElement>(null);
   const debouncedValue = useDebounce(inputValue, 500);
+  useClickOutside(componentRef, () => {
+    setSugestions([]);
+  });
   useEffect(() => {
-    if (debouncedValue) {
+    if (debouncedValue && triggerSearch.current) {
       const results = fetchSuggestions(debouncedValue);
       if (results instanceof Promise) {
         console.log("triggered");
@@ -84,6 +91,7 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.trim();
     setInputValue(value);
+    triggerSearch.current = true;
   };
   const handleSelect = (item: DataSourceType) => {
     setInputValue(item.value);
@@ -91,6 +99,7 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
     if (onSelect) {
       onSelect(item);
     }
+    triggerSearch.current = false;
   };
   const renderTemplate = (item: DataSourceType) => {
     return renderOption ? renderOption(item) : item.value;
@@ -116,7 +125,7 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
     );
   };
   return (
-    <div className="viking-auto-complete">
+    <div className="viking-auto-complete" ref={componentRef}>
       <Input
         value={inputValue}
         onChange={handleChange}

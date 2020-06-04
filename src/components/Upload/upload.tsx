@@ -31,6 +31,15 @@ export interface UploadProps {
   drag?: boolean;
 }
 
+/**
+ * Upload file by selecting or dragging.
+ * ### How To Use
+ * 
+ * ~~~js
+ * import { Upload } from 'vikingship'
+ * ~~~
+ */
+
 export const Upload: FC<UploadProps> = (props) => {
   const {
     action,

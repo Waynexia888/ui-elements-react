@@ -7,9 +7,9 @@ import TabItem from "./tabItem";
 import Icon from "../Icon";
 const defaultTabs = () => (
   <Tabs onSelect={action("selected")}>
-    <TabItem label="选项卡一">this is content one</TabItem>
-    <TabItem label="选项卡二">this is content two</TabItem>
-    <TabItem label="用户管理">this is content three</TabItem>
+    <TabItem label="Tab 1">this is content one</TabItem>
+    <TabItem label="Tab 2">this is content two</TabItem>
+    <TabItem label="Tab 3">this is content three</TabItem>
   </Tabs>
 );
 
@@ -28,7 +28,7 @@ const customTabs = () => (
     <TabItem
       label={
         <>
-          <Icon icon="check-circle" /> 自定义图标
+          <Icon icon="check-circle" /> Customize Icon
         </>
       }
     >
@@ -39,5 +39,5 @@ const customTabs = () => (
 );
 storiesOf("Tabs Component", module)
   .add("Tabs", defaultTabs)
-  .add("选项卡样式的Tabs", cardTabs)
-  .add("自定义选项卡样式", customTabs);
+  .add("Basic style of tabs", cardTabs)
+  .add("Customize style of tabs", customTabs);

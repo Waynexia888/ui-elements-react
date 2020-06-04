@@ -2,20 +2,20 @@ import React, { FC, useState, FunctionComponentElement } from "react";
 import classNames from "classnames";
 import { TabItemProps } from "./tabItem";
 export interface TabsProps {
-  /**当前激活 tab 面板的 index，默认为0 */
+  /**Initial index, which is 0 */
   defaultIndex?: number;
-  /**可以扩展的 className */
+  /**className */
   className?: string;
-  /**点击 Tab 触发的回调函数 */
+  /**Called when a tab item is selected */
   onSelect?: (selectedIndex: number) => void;
-  /**Tabs的样式，两种可选，默认为 line */
+  /**Basic style of tabs, line or card */
   type?: "line" | "card";
 }
 
 /**
- * 选项卡切换组件。
- * 提供平级的区域将大块内容进行收纳和展现，保持界面整洁。
- * ### 引用方法
+ * 
+ * Tabs make it easy to switch between different views.
+ * ### How To Use
  *
  * ~~~js
  * import { Tabs } from 'vikingship'

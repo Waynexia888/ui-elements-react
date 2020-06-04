@@ -4,6 +4,63 @@ import { action } from "@storybook/addon-actions";
 import { Upload, UploadFile } from "./upload";
 import Button from "../Button/button";
 import Icon from "../Icon/icon";
+
+const simpleUpload = () => (
+  <Upload
+    action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+    onChange={action("changed")}
+    onSuccess={action("success")}
+    onProgress={action("progress")}
+    onRemove={action("removed")}
+  >
+    <Button size="lg" btnType="primary">
+      <Icon icon="upload" /> Click to Upload{" "}
+    </Button>
+  </Upload>
+);
+
+const checkUpload = () => {
+  const checkFileSize = (file: File) => {
+    if (Math.round(file.size / 1024) > 50) {
+      alert("file too big");
+      return false;
+    }
+    return true;
+  };
+  return (
+    <Upload
+      action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+      onChange={action("changed")}
+      beforeUpload={checkFileSize}
+    >
+      <Button size="lg" btnType="primary">
+        <Icon icon="upload" /> less than 50Kb！{" "}
+      </Button>
+    </Upload>
+  );
+};
+
+const textCheck = `
+~~~javascript
+const checkFileSize = (file: File) => {
+  if (Math.round(file.size / 1024) > 50) {
+    alert('file too big')
+    return false;
+  }
+  return true;
+}
+return (
+  <Upload
+    action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+    onChange={action('changed')}
+    beforeUpload={checkFileSize}
+  >
+    <Button size="lg" btnType="primary"><Icon icon="upload" /> less than 50Kb！ </Button>
+  </Upload>  
+)
+~~~
+`;
+
 const defaultFileList: UploadFile[] = [
   {
     uid: "123",
@@ -26,7 +83,7 @@ const filePromise = (file: File) => {
   const newFile = new File([file], "new_name.docx", { type: file.type });
   return Promise.resolve(newFile);
 };
-const SimpleUpload = () => {
+const dragUpload = () => {
   return (
     <Upload
       action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
@@ -43,4 +100,7 @@ const SimpleUpload = () => {
   );
 };
 
-storiesOf("Upload component", module).add("Upload", SimpleUpload);
+storiesOf("Upload component", module)
+.add("Upload", simpleUpload)
+.add('Check upload size', checkUpload, {info: {source: false, text: textCheck}})
+  .add('Drag to upload', dragUpload)

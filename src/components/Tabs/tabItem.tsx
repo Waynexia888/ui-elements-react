@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 
 export interface TabItemProps {
-  /** Tab选项上面的文字 */
+  /** Plain text in tabs */
   label: string | React.ReactElement;
-  /** Tab选项是否被禁用 */
+  /** Whether disabled tab */
   disabled?: boolean;
 }
 

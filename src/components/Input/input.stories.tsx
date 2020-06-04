@@ -60,4 +60,4 @@ storiesOf("Input component", module)
   .add("Disabled Input", disabledInput)
   .add("Input with icon", iconInput)
   .add("Size of Input", sizeInput)
-  .add("Input with prefix or suffix", pandInput);
+  .add("Pre / Post Input", pandInput);

@@ -12,3 +12,4 @@ export { default as Transition } from "./components/Transition";
 export { default as Upload } from "./components/Upload";
 export { default as Tabs } from "./components/Tabs";
 export { default as Alert } from "./components/Alert";
+export { default as Select } from "./components/Select";

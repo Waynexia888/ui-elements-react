@@ -1,8 +1,8 @@
 import React, {
-  FC,
   ReactElement,
   InputHTMLAttributes,
   ChangeEvent,
+  forwardRef,
 } from "react";
 import classNames from "classnames";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
@@ -11,29 +11,29 @@ import Icon from "../Icon/icon";
 type InputSize = "lg" | "sm";
 export interface InputProps
   extends Omit<InputHTMLAttributes<HTMLElement>, "size"> {
-  /**Disabled Input or not */
+  /**是否禁用 Input */
   disabled?: boolean;
-  /**The size of the input box, large or small */
+  /**设置 input 大小，支持 lg 或者是 sm */
   size?: InputSize;
   /**添加图标，在右侧悬浮添加一个图标，用于提示 */
   icon?: IconProp;
-  /**The prefix icon for the Input */
+  /**添加前缀 用于配置一些固定组合 */
   prepend?: string | ReactElement;
-  /**The suffix icon for the Input */
+  /**添加后缀 用于配置一些固定组合 */
   append?: string | ReactElement;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 /**
- * A basic widget for getting the user input is a text field. Keyboard and mouse can be used for providing or changing data.
+ * Input 输入框 通过鼠标或键盘输入内容，是最基础的表单域的包装。
  *
  * ~~~js
- * // How to Use
+ * // 这样引用
  * import { Input } from 'vikingship'
  * ~~~
  * 支持 HTMLInput 的所有基本属性
  */
-export const Input: FC<InputProps> = (props) => {
+export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
   const { disabled, size, icon, prepend, append, style, ...restProps } = props;
   const cnames = classNames("viking-input-wrapper", {
     [`input-size-${size}`]: size,
@@ -61,6 +61,7 @@ export const Input: FC<InputProps> = (props) => {
         </div>
       )}
       <input
+        ref={ref}
         className="viking-input-inner"
         disabled={disabled}
         {...restProps}
@@ -68,6 +69,6 @@ export const Input: FC<InputProps> = (props) => {
       {append && <div className="viking-input-group-append">{append}</div>}
     </div>
   );
-};
+});
 
 export default Input;

@@ -6,8 +6,11 @@ export type ButtonType = "primary" | "default" | "danger" | "link";
 
 interface BaseButtonProps {
   className?: string;
+  /**disabled state of button */
   disabled?: boolean;
+  /**set the size of button */
   size?: ButtonSize;
+  /**can be set to primary danger link or default*/
   btnType?: ButtonType;
   children: React.ReactNode;
   href?: string;
@@ -15,6 +18,13 @@ interface BaseButtonProps {
 type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>;
 type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>;
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
+/**
+ * This is our First Button Component
+ * ## Button header
+ * ~~~js
+ * import { Button } from 'vikingship'
+ * ~~~
+ */
 export const Button: FC<ButtonProps> = (props) => {
   const {
     btnType,

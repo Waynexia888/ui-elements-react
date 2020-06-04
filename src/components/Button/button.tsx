@@ -19,8 +19,8 @@ type NativeButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLElement>;
 type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>;
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 /**
- * This is our First Button Component
- * ## Button header
+ * A button means an operation (or a series of operations). Clicking a button will trigger corresponding business logic.
+ * ## How To Use
  * ~~~js
  * import { Button } from 'vikingship'
  * ~~~

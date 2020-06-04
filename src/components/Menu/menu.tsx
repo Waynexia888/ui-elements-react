@@ -1,26 +1,35 @@
-import React, { useState, createContext } from "react";
+import React, { FC, useState, createContext, CSSProperties } from "react";
 import classNames from "classnames";
 import { MenuItemProps } from "./menuItem";
 
 type MenuMode = "horizontal" | "vertical";
-type SelectCallback = (selectedIndex: string) => void;
 export interface MenuProps {
+  /**The index of the menu */
   defaultIndex?: string;
   className?: string;
+  /**Type of menu; vertical or horizontal */
   mode?: MenuMode;
-  style?: React.CSSProperties;
-  onSelect?: SelectCallback;
+  style?: CSSProperties;
+  /**Called when a menu item is selected */
+  onSelect?: (selectedIndex: string) => void;
+  /**Show submenu when mouse enters, (in seconds) */
   defaultOpenSubMenus?: string[];
 }
 interface IMenuContext {
   index: string;
-  onSelect?: SelectCallback;
+  onSelect?: (selectedIndex: string) => void;
   mode?: MenuMode;
   defaultOpenSubMenus?: string[];
 }
 
 export const MenuContext = createContext<IMenuContext>({ index: "0" });
-const Menu: React.FC<MenuProps> = (props) => {
+/**
+ * Navigation is an important part of any website, as a good navigation setup allows users to move around the site quickly and efficiently. Ant Design offers top and side navigation options. Top navigation provides all the categories and functions of the website. Side navigation provides the multi-level structure of the website.
+ * ~~~js
+ * import { Menu } from 'vikingship'
+ * ~~~
+ */
+export const Menu: FC<MenuProps> = (props) => {
   const {
     className,
     mode,

@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Waynexia888/ui-elements-react/static/css/main.b3dad4da.chunk.css",
+    "main.js": "/Waynexia888/ui-elements-react/main.42d76325a6387d01ea7c.bundle.js",
+    "main.css.map": "/Waynexia888/ui-elements-react/static/css/main.b3dad4da.chunk.css.map",
+    "main.js.map": "/Waynexia888/ui-elements-react/main.42d76325a6387d01ea7c.bundle.js.map",
+    "runtime~main.js": "/Waynexia888/ui-elements-react/runtime~main.42d76325a6387d01ea7c.bundle.js",
+    "runtime~main.js.map": "/Waynexia888/ui-elements-react/runtime~main.42d76325a6387d01ea7c.bundle.js.map",
+    "vendors~main.css": "/Waynexia888/ui-elements-react/static/css/vendors~main.f8f248a5.chunk.css",
+    "vendors~main.js": "/Waynexia888/ui-elements-react/vendors~main.42d76325a6387d01ea7c.bundle.js",
+    "vendors~main.css.map": "/Waynexia888/ui-elements-react/static/css/vendors~main.f8f248a5.chunk.css.map",
+    "vendors~main.js.map": "/Waynexia888/ui-elements-react/vendors~main.42d76325a6387d01ea7c.bundle.js.map",
+    "iframe.html": "/Waynexia888/ui-elements-react/iframe.html",
+    "precache-manifest.5984e9c336318775c41089bc28b5a7f1.js": "/Waynexia888/ui-elements-react/precache-manifest.5984e9c336318775c41089bc28b5a7f1.js",
+    "service-worker.js": "/Waynexia888/ui-elements-react/service-worker.js",
+    "vendors~main.42d76325a6387d01ea7c.bundle.js.LICENSE.txt": "/Waynexia888/ui-elements-react/vendors~main.42d76325a6387d01ea7c.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.42d76325a6387d01ea7c.bundle.js",
+    "static/css/vendors~main.f8f248a5.chunk.css",
+    "vendors~main.42d76325a6387d01ea7c.bundle.js",
+    "static/css/main.b3dad4da.chunk.css",
+    "main.42d76325a6387d01ea7c.bundle.js"
+  ]
+}

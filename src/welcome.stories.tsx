@@ -7,9 +7,11 @@ storiesOf('Welcome page', module)
       <>
         <h1>Welcome to ui-elements-react 👍</h1>
         <p>
-          ui-elements-react is dedicated to providing a good development
-          experience for programmers. Make sure that you have installed
-          Node.js(> 8.0.0) correctly.
+          ui-elements-react is a React UI component library that contains a set
+          of high quality components and demos for building rich, interactive
+          user interfaces. The goal of ui-elements-react is to provide a
+          good development experience for programmers. Make sure that you have
+          installed Node.js(> 8.0.0) correctly.
         </p>
         <h3>Installation</h3>
         <p>

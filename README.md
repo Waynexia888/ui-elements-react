@@ -30,7 +30,7 @@
 - npm install ui-elements-react --save
 
 ## Local command line
-1. Clone the repository: 
+1. Clone the repository with HTTPS: `https://github.com/Waynexia888/ui-elements-react.git` 
 
 2. Ensure you have node.js installed in the repo, otherwise install nodeJS using npm. 
 To install: `npm install -g http-server`

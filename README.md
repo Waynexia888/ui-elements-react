@@ -31,6 +31,12 @@
 ## Installation
 - npm install ui-elements-react --save
 
+## Import Styled CSS 🎨
+- import 'ui-elements-react/dist/index.css'
+
+## Import Component 📦
+- import {componentName} from 'ui-elements-react';
+
 ## Local command line
 1. Clone the repository with HTTPS: `https://github.com/Waynexia888/ui-elements-react.git` 
 

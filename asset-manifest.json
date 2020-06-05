@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Waynexia888/ui-elements-react/static/css/main.b3dad4da.chunk.css",
+    "main.js": "/Waynexia888/ui-elements-react/main.13d50e9760448760e7c2.bundle.js",
+    "main.css.map": "/Waynexia888/ui-elements-react/static/css/main.b3dad4da.chunk.css.map",
+    "main.js.map": "/Waynexia888/ui-elements-react/main.13d50e9760448760e7c2.bundle.js.map",
+    "runtime~main.js": "/Waynexia888/ui-elements-react/runtime~main.13d50e9760448760e7c2.bundle.js",
+    "runtime~main.js.map": "/Waynexia888/ui-elements-react/runtime~main.13d50e9760448760e7c2.bundle.js.map",
+    "vendors~main.css": "/Waynexia888/ui-elements-react/static/css/vendors~main.f8f248a5.chunk.css",
+    "vendors~main.js": "/Waynexia888/ui-elements-react/vendors~main.13d50e9760448760e7c2.bundle.js",
+    "vendors~main.css.map": "/Waynexia888/ui-elements-react/static/css/vendors~main.f8f248a5.chunk.css.map",
+    "vendors~main.js.map": "/Waynexia888/ui-elements-react/vendors~main.13d50e9760448760e7c2.bundle.js.map",
+    "iframe.html": "/Waynexia888/ui-elements-react/iframe.html",
+    "precache-manifest.ef47f5b8b4fa8cd94cca00b16ad00f77.js": "/Waynexia888/ui-elements-react/precache-manifest.ef47f5b8b4fa8cd94cca00b16ad00f77.js",
+    "service-worker.js": "/Waynexia888/ui-elements-react/service-worker.js",
+    "vendors~main.13d50e9760448760e7c2.bundle.js.LICENSE.txt": "/Waynexia888/ui-elements-react/vendors~main.13d50e9760448760e7c2.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.13d50e9760448760e7c2.bundle.js",
+    "static/css/vendors~main.f8f248a5.chunk.css",
+    "vendors~main.13d50e9760448760e7c2.bundle.js",
+    "static/css/main.b3dad4da.chunk.css",
+    "main.13d50e9760448760e7c2.bundle.js"
+  ]
+}

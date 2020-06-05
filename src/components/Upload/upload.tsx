@@ -51,7 +51,7 @@ export interface UploadProps {
  * ### How To Use
  * 
  * ~~~js
- * import { Upload } from 'vikingship'
+ * import { Upload } from 'ui-elements-react'
  * ~~~
  */
 
@@ -106,7 +106,6 @@ export const Upload: FC<UploadProps> = (props) => {
     }
   };
   const handleRemove = (file: UploadFile) => {
-    console.log(file);
     setFileList((prevList) => {
       return prevList.filter((item) => item.uid !== file.uid);
     });
@@ -162,28 +161,34 @@ export const Upload: FC<UploadProps> = (props) => {
           let percentage = Math.round((e.loaded * 100) / e.total) || 0;
           if (percentage < 100) {
             updateFileList(_file, { percent: percentage, status: "uploading" });
+            _file.status = "uploading";
+            _file.percent = percentage;
             if (onProgress) {
-              onProgress(percentage, file);
+              onProgress(percentage, _file);
             }
           }
         },
       })
       .then((resp) => {
         updateFileList(_file, { status: "success", response: resp.data });
+        _file.status = "success";
+        _file.response = resp.data;
         if (onSuccess) {
-          onSuccess(resp.data, file);
+          onSuccess(resp.data, _file);
         }
         if (onChange) {
-          onChange(file);
+          onChange(_file);
         }
       })
       .catch((err) => {
         updateFileList(_file, { status: "error", error: err });
+        _file.status = "error";
+        _file.error = err;
         if (onError) {
-          onError(err, file);
+          onError(err, _file);
         }
         if (onChange) {
-          onChange(file);
+          onChange(_file);
         }
       });
   };

@@ -36,7 +36,7 @@ export interface AutoCompleteProps extends Omit<InputProps, "onSelect"> {
  * ### How To Use
  * 
  * ~~~js
- * import { AutoComplete } from 'vikingship'
+ * import { AutoComplete } from 'ui-elements-react'
  * ~~~
  */
 
@@ -84,7 +84,7 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
       setShowDropdown(false);
     }
     setHighlightIndex(-1);
-  }, [debouncedValue]);
+  }, [debouncedValue, fetchSuggestions]);
   const highlight = (index: number) => {
     if (index < 0) index = 0;
     if (index >= suggestions.length) {

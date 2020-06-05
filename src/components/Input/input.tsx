@@ -29,7 +29,7 @@ export interface InputProps
  *
  * ~~~js
  * // How To Use
- * import { Input } from 'vikingship'
+ * import { Input } from 'ui-elements-react'
  * ~~~
  * 
  */

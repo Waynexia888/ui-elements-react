@@ -18,7 +18,7 @@ export interface TabsProps {
  * ### How To Use
  *
  * ~~~js
- * import { Tabs } from 'vikingship'
+ * import { Tabs } from 'ui-elements-react'
  * ~~~
  */
 export const Tabs: FC<TabsProps> = (props) => {

@@ -22,7 +22,7 @@ export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
  * A button means an operation (or a series of operations). Clicking a button will trigger corresponding business logic.
  * ## How To Use
  * ~~~js
- * import { Button } from 'vikingship'
+ * import { Button } from 'ui-elements-react'
  * ~~~
  */
 export const Button: FC<ButtonProps> = (props) => {

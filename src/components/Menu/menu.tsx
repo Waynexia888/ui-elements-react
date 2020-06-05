@@ -26,7 +26,7 @@ export const MenuContext = createContext<IMenuContext>({ index: "0" });
 /**
  * Navigation is an important part of any website, as a good navigation setup allows users to move around the site quickly and efficiently. Top navigation provides all the categories and functions of the website. Side navigation provides the multi-level structure of the website.
  * ~~~js
- * import { Menu } from 'vikingship'
+ * import { Menu } from 'ui-elements-react'
  * ~~~
  */
 export const Menu: FC<MenuProps> = (props) => {

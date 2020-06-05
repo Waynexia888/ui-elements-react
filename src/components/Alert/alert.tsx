@@ -22,7 +22,7 @@ export interface AlertProps {
  * ### How To Use
  *
  * ~~~js
- * import { Alert } from 'vikingship'
+ * import { Alert } from 'ui-elements-react'
  * ~~~
  */
 export const Alert: FC<AlertProps> = (props) => {

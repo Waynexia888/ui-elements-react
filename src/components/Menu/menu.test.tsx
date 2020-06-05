@@ -3,7 +3,6 @@ import {
   render,
   RenderResult,
   fireEvent,
-  cleanup,
   wait,
 } from "@testing-library/react";
 import Menu, { MenuProps } from "./menu";

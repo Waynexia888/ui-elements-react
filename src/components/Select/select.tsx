@@ -45,7 +45,7 @@ export const SelectContext = createContext<ISelectContext>({
  * ### How To Use
  *
  * ~~~js
- * import { Select } from 'vikingship'
+ * import { Select } from 'ui-elements-react'
  * // free to use  <Select> and <Select.Option>
  * ~~~
  */

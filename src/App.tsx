@@ -66,7 +66,7 @@
 
 // export default App;
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import axios from "axios";
 const App: React.FC = () => {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {

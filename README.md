@@ -1,4 +1,4 @@
-# ui-elements-react component library
+# `ui-elements-react` component library
 `ui-elements-react` is a React UI component library that contains a set of high quality components and demos for building rich, interactive user interfaces. The goal of `ui-elements-react` is to provide a good development experience for programmers. Make sure that you have installed Node.js(> 8.0.0) correctly.
 
 [Storybook Demo](https://waynexia888.github.io/ui-elements-react/?path=/story/welcome-page--welcome)<br/>

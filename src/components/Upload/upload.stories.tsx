@@ -41,6 +41,7 @@ const checkUpload = () => {
 };
 
 const textCheck = `
+### Story Source
 ~~~javascript
 const checkFileSize = (file: File) => {
   if (Math.round(file.size / 1024) > 50) {

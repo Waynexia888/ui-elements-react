@@ -18,12 +18,27 @@ interface DataSourceObject {
 }
 export type DataSourceType<T = {}> = T & DataSourceObject;
 export interface AutoCompleteProps extends Omit<InputProps, "onSelect"> {
+  /**
+   * Get the user input，return a synchronous or asynchronous Promise
+   * type DataSourceType<T = {}> = T & DataSourceObject
+   */
   fetchSuggestions: (
     str: string
   ) => DataSourceType[] | Promise<DataSourceType[]>;
+  /** Called when a option is selected. param is option's value and option instance.*/
   onSelect?: (item: DataSourceType) => void;
+  /**Return a ReactElement */
   renderOption?: (item: DataSourceType) => ReactElement;
 }
+
+/**
+ * Autocomplete function of input field.
+ * ### How To Use
+ * 
+ * ~~~js
+ * import { AutoComplete } from 'vikingship'
+ * ~~~
+ */
 
 export const AutoComplete: FC<AutoCompleteProps> = (props) => {
   const {

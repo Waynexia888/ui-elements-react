@@ -1,4 +1,4 @@
-# ui-elements-react component library
+# `ui-elements-react` component library
 `ui-elements-react` is a React UI component library that contains a set of high quality components and demos for building rich, interactive user interfaces. The goal of `ui-elements-react` is to provide a good development experience for programmers. Make sure that you have installed Node.js(> 8.0.0) correctly.
 
 [Storybook Demo](https://waynexia888.github.io/ui-elements-react/?path=/story/welcome-page--welcome)<br/>
@@ -30,7 +30,7 @@
 - npm install ui-elements-react --save
 
 ## Local command line
-1. Clone the repository: 
+1. Clone the repository with HTTPS: `https://github.com/Waynexia888/ui-elements-react.git` 
 
 2. Ensure you have node.js installed in the repo, otherwise install nodeJS using npm. 
 To install: `npm install -g http-server`

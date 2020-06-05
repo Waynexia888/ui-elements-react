@@ -25,6 +25,7 @@
 - react-fontawesome, react-transition-group
 - Sass
 - npm publish
+- Husky(It can prevent bad git commit, git push and more 🐶 woof!)
 - travis CI/CD
 
 ## Installation
